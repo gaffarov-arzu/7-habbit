@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 Etkili İnsanın Alışkanlıkları - Stephen Covey</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #1e3a5f;
+            --gold: #c9a961;
+            --burgundy: #6b2737;
+            --cream: #f5f1e8;
+            --forest: #2d5016;
+            --charcoal: #2c2c2c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Merriweather', serif;
+            background: var(--cream);
+            color: var(--charcoal);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(to bottom, var(--navy) 0%, var(--charcoal) 100%);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .geometric-bg {
+            position: absolute;
+            inset: 0;
+            opacity: 0.1;
+        }
+
+        .geometric-bg::before,
+        .geometric-bg::after {
+            content: '';
+            position: absolute;
+            border: 2px solid var(--gold);
+        }
+
+        .geometric-bg::before {
+            width: 600px;
+            height: 600px;
+            top: -200px;
+            right: -100px;
+            border-radius: 50%;
+            animation: rotate-slow 30s linear infinite;
+        }
+
+        .geometric-bg::after {
+            width: 400px;
+            height: 400px;
+            bottom: -100px;
+            left: -150px;
+            transform: rotate(45deg);
+            animation: rotate-slow 25s linear infinite reverse;
+        }
+
+        @keyframes rotate-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 10;
+            max-width: 1000px;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .hero-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(8rem, 20vw, 15rem);
+            font-weight: 900;
+            color: var(--gold);
+            line-height: 0.8;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 60px rgba(201, 169, 97, 0.5);
+            letter-spacing: -10px;
+        }
+
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(2rem, 6vw, 4rem);
+            color: white;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: var(--gold);
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .hero-author {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.8);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-top: 2rem;
+        }
+
+        .maturity-continuum {
+            margin: 4rem auto;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 2px solid rgba(201, 169, 97, 0.3);
+        }
+
+        .continuum-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.3rem;
+            color: var(--gold);
+            text-align: center;
+            margin-bottom: 2rem;
+            letter-spacing: 2px;
+        }
+
+        .continuum-path {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .continuum-path::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--burgundy), var(--gold), var(--forest));
+            z-index: 0;
+        }
+
+        .continuum-stage {
+            background: var(--navy);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            z-index: 1;
+            border: 3px solid var(--gold);
+            font-size: 0.9rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--gold);
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+            cursor: pointer;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-15px); }
+        }
+
+        .section {
+            padding: 6rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-intro {
+            background: var(--navy);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .section-intro h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 2rem;
+            letter-spacing: 3px;
+            color: var(--gold);
+        }
+
+        .section-intro p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.3rem;
+            line-height: 1.9;
+            opacity: 0.95;
+        }
+
+        .habits-container {
+            display: grid;
+            gap: 4rem;
+        }
+
+        .habit-section {
+            position: relative;
+        }
+
+        .habit-category {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--burgundy), var(--navy));
+            border-radius: 20px;
+            color: white;
+        }
+
+        .habit-category h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: 3px;
+        }
+
+        .habit-category p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .habit-card {
+            background: white;
+            border-radius: 25px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 3px solid transparent;
+        }
+
+        .habit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.15);
+            border-color: var(--gold);
+        }
+
+        .habit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 8px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--burgundy), var(--gold), var(--forest));
+        }
+
+        .habit-number-badge {
+            position: absolute;
+            top: -15px;
+            right: 30px;
+            background: var(--gold);
+            color: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            box-shadow: 0 10px 30px rgba(201, 169, 97, 0.4);
+        }
+
+        .habit-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            color: var(--navy);
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            line-height: 1.3;
+            padding-right: 100px;
+        }
+
+        .habit-subtitle {
+            font-size: 1.3rem;
+            color: var(--burgundy);
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .habit-description {
+            font-size: 1.15rem;
+            line-height: 1.9;
+            margin-bottom: 2rem;
+            color: #444;
+        }
+
+        .habit-principles {
+            background: #f8f6f1;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .principles-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .principles-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .principles-list li {
+            padding: 0.8rem 0;
+            padding-left: 2rem;
+            position: relative;
+            font-size: 1.05rem;
+            color: #333;
+        }
+
+        .principles-list li::before {
+            content: '◆';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-size: 1.2rem;
+        }
+
+        .habit-example {
+            background: linear-gradient(135deg, rgba(30, 58, 95, 0.05), rgba(201, 169, 97, 0.05));
+            border-left: 5px solid var(--gold);
+            padding: 2rem;
+            border-radius: 10px;
+            font-style: italic;
+            color: var(--navy);
+            font-size: 1.08rem;
+            line-height: 1.8;
+        }
+
+        .paradigm-shift {
+            background: var(--forest);
+            color: white;
+            padding: 6rem 2rem;
+            margin: 4rem 0;
+        }
+
+        .paradigm-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .paradigm-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 2rem;
+            color: var(--gold);
+            letter-spacing: 2px;
+        }
+
+        .paradigm-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .paradigm-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 2px solid rgba(201, 169, 97, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .paradigm-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--gold);
+            transform: translateY(-8px);
+        }
+
+        .paradigm-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .paradigm-card-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        .paradigm-card-desc {
+            font-size: 1.08rem;
+            line-height: 1.7;
+            opacity: 0.95;
+        }
+
+        .implementation {
+            background: white;
+            padding: 6rem 2rem;
+        }
+
+        .implementation-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .implementation-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--navy);
+        }
+
+        .steps-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .step-card {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 2rem;
+            background: #f8f6f1;
+            padding: 2.5rem;
+            border-radius: 20px;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .step-card:hover {
+            background: #f0ede3;
+            transform: translateX(10px);
+        }
+
+        .step-number {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--burgundy), var(--navy));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            font-weight: 900;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .step-content h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.6rem;
+            color: var(--navy);
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+
+        .step-content p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .quote-section {
+            background: var(--burgundy);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .quote-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .quote-mark {
+            font-size: 8rem;
+            color: var(--gold);
+            opacity: 0.3;
+            line-height: 0.5;
+            font-family: Georgia, serif;
+        }
+
+        .quote-text {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            line-height: 1.6;
+            margin: 2rem 0;
+            font-style: italic;
+        }
+
+        .quote-author {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.3rem;
+            color: var(--gold);
+            margin-top: 2rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        footer {
+            background: var(--charcoal);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        footer a:hover {
+            border-bottom-color: var(--gold);
+        }
+
+        @media (max-width: 768px) {
+            .step-card {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .continuum-path {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            
+            .continuum-path::before {
+                width: 3px;
+                height: 100%;
+                left: 50%;
+                top: 0;
+            }
+
+            .paradigm-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="geometric-bg"></div>
+        <div class="hero-content">
+            <div class="hero-number">7</div>
+            <h1>Etkili İnsanların<br>Alışkanlıkları</h1>
+            <p class="hero-subtitle">Kişisel Değişim İçin Güçlü Dersler</p>
+            <p class="hero-author">Stephen R. Covey</p>
+            
+            <div class="maturity-continuum">
+                <div class="continuum-title">Olgunluk Sürekliliği</div>
+                <div class="continuum-path">
+                    <div class="continuum-stage">Bağımlılık</div>
+                    <div class="continuum-stage">Bağımsızlık</div>
+                    <div class="continuum-stage">Karşılıklı Bağımlılık</div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator" onclick="document.querySelector('.section-intro').scrollIntoView({behavior: 'smooth'})">
+            ↓
+        </div>
+    </section>
+
+    <section class="section-intro">
+        <h2>İçeriden Dışarıya Değişim</h2>
+        <p>
+            Gerçek değişim içeriden dışarıya doğru gerçekleşir. Bu 7 alışkanlık, 
+            karakterinizi geliştirerek hayatınızda kalıcı ve anlamlı değişimler 
+            yaratmanıza yardımcı olur. Önce kişisel zaferleri kazanın, 
+            sonra başkalarıyla birlikte daha büyük başarılara ulaşın.
+        </p>
+    </section>
+
+    <div class="section">
+        <div class="habits-container">
+            <!-- Private Victory -->
+            <div class="habit-section">
+                <div class="habit-category">
+                    <h3>KİŞİSEL ZAFER</h3>
+                    <p>Bağımlılıktan Bağımsızlığa Geçiş</p>
+                </div>
+
+                <div class="habit-card">
+                    <div class="habit-number-badge">1</div>
+                    <h3 class="habit-title">Proaktif Olun</h3>
+                    <p class="habit-subtitle">Sorumluluk Alın</p>
+                    <p class="habit-description">
+                        Proaktif insanlar, davranışlarının sorumluluğunu alırlar. Koşulları, 
+                        şartlandırmayı veya duygularını suçlamazlar. Etki alanlarına odaklanırlar 
+                        ve kendi kararlarını bilinçli olarak alırlar. Reaktif olmak yerine, 
+                        değerlerinize dayalı hareket edin.
+                    </p>
+                    <div class="habit-principles">
+                        <h4 class="principles-title">Temel Prensipler:</h4>
+                        <ul class="principles-list">
+                            <li>Etki alanınıza odaklanın, endişe alanınızı değil</li>
+                            <li>Dışarıdaki şartlar yerine içsel değerlerinize göre hareket edin</li>
+                            <li>Seçim özgürlüğünüz her zaman vardır</li>
+                            <li>Dilinizdeki değişikliklerle başlayın: "Yapmak zorundayım" → "Yapmayı seçiyorum"</li>
+                        </ul>
+                    </div>
+                    <div class="habit-example">
+                        💡 Örnek: Hava kötü olduğunda "Bugün berbat bir gün" demek yerine, 
+                        "Bugün içeride verimli çalışmak için harika bir fırsat" diyebilirsiniz.
+                    </div>
+                </div>
+
+                <div class="habit-card">
+                    <div class="habit-number-badge">2</div>
+                    <h3 class="habit-title">Sonu Düşünerek Başlayın</h3>
+                    <p class="habit-subtitle">Vizyonunuzu Belirleyin</p>
+                    <p class="habit-description">
+                        Her şeyi iki kez yaratırsınız: önce zihninizde, sonra fiziksel olarak. 
+                        Hayatınızın sonunda ne olmasını istediğinizi belirleyin ve her gününüzü 
+                        bu vizyona göre planlayın. Kişisel misyon beyanınızı yazın ve ona göre yaşayın.
+                    </p>
+                    <div class="habit-principles">
+                        <h4 class="principles-title">Temel Prensipler:</h4>
+                        <ul class="principles-list">
+                            <li>Kişisel bir misyon beyanı oluşturun</li>
+                            <li>Uzun vadeli hedeflerinizi belirleyin</li>
+                            <li>Değerlerinize dayalı roller tanımlayın</li>
+                            <li>Her kararı nihai hedeflerinize göre değerlendirin</li>
+                        </ul>
+                    </div>
+                    <div class="habit-example">
+                        💡 Örnek: "Cenazede insanların benim hakkımda ne söylemesini isterim?" 
+                        sorusunu yanıtlayın. Bu cevap, bugünden itibaren nasıl yaşamanız 
+                        gerektiğini gösterir.
+                    </div>
+                </div>
+
+                <div class="habit-card">
+                    <div class="habit-number-badge">3</div>
+                    <h3 class="habit-title">İlk Önce İlk Şeyleri Yapın</h3>
+                    <p class="habit-subtitle">Önceliklendirme ve Disiplin</p>
+                    <p class="habit-description">
+                        Acil değil ama önemli olan şeylere odaklanın. Zaman yönetimi matrisi 
+                        kullanarak aktivitelerinizi sınıflandırın. Çoğu insan acil ama önemsiz 
+                        şeylere zaman harcar. Gerçek başarı, önemli ama acil olmayan Quadrant II 
+                        aktivitelerine odaklanmaktan gelir.
+                    </p>
+                    <div class="habit-principles">
+                        <h4 class="principles-title">Zaman Yönetimi Matrisi:</h4>
+                        <ul class="principles-list">
+                            <li><strong>Quadrant I:</strong> Acil ve Önemli (Krizler, son teslim tarihleri)</li>
+                            <li><strong>Quadrant II:</strong> Önemli ama Acil Değil (Planlama, ilişkiler, gelişim) ⭐</li>
+                            <li><strong>Quadrant III:</strong> Acil ama Önemsiz (Kesintiler, toplantılar)</li>
+                            <li><strong>Quadrant IV:</strong> Ne Acil Ne Önemli (Zaman kaybı)</li>
+                        </ul>
+                    </div>
+                    <div class="habit-example">
+                        💡 Örnek: Haftalık planlama, egzersiz, öğrenme, ilişki kurma gibi 
+                        aktiviteler Quadrant II'dedir. Bunlara odaklanmak uzun vadede 
+                        krizleri ve stresi azaltır.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Public Victory -->
+            <div class="habit-section">
+                <div class="habit-category">
+                    <h3>KAMUSAL ZAFER</h3>
+                    <p>Bağımsızlıktan Karşılıklı Bağımlılığa Geçiş</p>
+                </div>
+
+                <div class="habit-card">
+                    <div class="habit-number-badge">4</div>
+                    <h3 class="habit-title">Kazan-Kazan Düşünün</h3>
+                    <p class="habit-subtitle">Karşılıklı Fayda Zihniyeti</p>
+                    <p class="habit-description">
+                        Hayat bir rekabet değildir. Kazan-Kazan mentalitesi, hem sizin hem de 
+                        karşınızdakinin kazanabileceği çözümler arar. Bu bir bolluk zihniyetidir, 
+                        kıtlık zihniyeti değil. Başkalarının başarısı sizin başarısızlığınız değildir.
+                    </p>
+                    <div class="habit-principles">
+                        <h4 class="principles-title">6 Paradigma:</h4>
+                        <ul class="principles-list">
+                            <li><strong>Kazan-Kazan:</strong> Herkes için faydalı çözüm ⭐</li>
+                            <li><strong>Kazan-Kaybet:</strong> Ben kazanırsam sen kaybedersin</li>
+                            <li><strong>Kaybet-Kazan:</strong> Barış uğruna her şeyi kabul et</li>
+                            <li><strong>Kaybet-Kaybet:</strong> İkimiz de kaybedersek olur</li>
+                            <li><strong>Kazan:</strong> Sadece kendi kazancım önemli</li>
+                            <li><strong>Anlaşma Yok:</strong> Kazan-Kazan mümkün değilse, anlaşmamak daha iyi</li>
+                        </ul>
+                    </div>
+                    <div class="habit-example">
+                        💡 Örnek: Müzakerelerinizde "Nasıl ikimiz için de iyi olabilir?" 
+                        sorusunu sorun. Pastayı paylaşmak yerine pastayı büyütmeye odaklanın.
+                    </div>
+                </div>
+
+                <div class="habit-card">
+                    <div class="habit-number-badge">5</div>
+                    <h3 class="habit-title">Önce Anlamaya Çalışın, Sonra Anlaşılmaya</h3>
+                    <p class="habit-subtitle">Empatik Dinleme</p>
+                    <p class="habit-description">
+                        Çoğu insan dinlemez, sadece cevap vermeyi bekler. Gerçek iletişim, 
+                        önce karşınızdakini derin bir şekilde anlamaktan başlar. Empatik dinleme, 
+                        sadece kelimeleri değil, duyguları ve niyetleri de anlamaktır.
+                    </p>
+                    <div class="habit-principles">
+                        <h4 class="principles-title">Dinleme Seviyeleri:</h4>
+                        <ul class="principles-list">
+                            <li>Görmezden Gelme: Aslında dinlemiyorsunuz</li>
+                            <li>Yapmacık Dinleme: "Uh-huh, evet" diyorsunuz</li>
+                            <li>Seçici Dinleme: Sadece bazı kısımları duyuyorsunuz</li>
+                            <li>Dikkatli Dinleme: Kelimelere odaklanıyorsunuz</li>
+                            <li>Empatik Dinleme: Anlamak için dinliyorsunuz ⭐</li>
+                        </ul>
+                    </div>
+                    <div class="habit-example">
+                        💡 Örnek: Birisi bir sorunu paylaştığında, hemen çözüm önermek yerine 
+                        "Nasıl hissettiğini anlıyorum" deyin ve daha fazla dinleyin. 
+                        İlk tepkinizi ertelemeyi öğrenin.
+                    </div>
+                </div>
+
+                <div class="habit-card">
+                    <div class="habit-number-badge">6</div>
+                    <h3 class="habit-title">Sinerji Yaratın</h3>
+                    <p class="habit-subtitle">Yaratıcı İşbirliği</p>
+                    <p class="habit-description">
+                        Sinerji, bütünün parçaların toplamından büyük olduğu durumdur. 
+                        Farklılıkları değerlendirin ve bunları güce dönüştürün. 
+                        1+1=3 veya daha fazla olabilir. Yaratıcı işbirliği, tek başınıza 
+                        ulaşamayacağınız çözümlere ulaşmanızı sağlar.
+                    </p>
+                    <div class="habit-principles">
+                        <h4 class="principles-title">Sinerji Prensipleri:</h4>
+                        <ul class="principles-list">
+                            <li>Farklılıkları tehdit değil, fırsat olarak görün</li>
+                            <li>Üçüncü alternatifi arayın (benim yolum, senin yolun, daha iyi yol)</li>
+                            <li>Yaratıcı işbirliğine açık olun</li>
+                            <li>Güven ve empatinin gücünden yararlanın</li>
+                        </ul>
+                    </div>
+                    <div class="habit-example">
+                        💡 Örnek: Bir takım projesinde, her kişinin benzersiz yeteneklerini 
+                        birleştirerek hiçbir üyenin tek başına üretemeyeceği sonuçlar yaratın. 
+                        Beyin fırtınası seanslarında tüm fikirleri değerlendirin.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Renewal -->
+            <div class="habit-section">
+                <div class="habit-category">
+                    <h3>YENİLENME</h3>
+                    <p>Sürekli İyileşme ve Büyüme</p>
+                </div>
+
+                <div class="habit-card">
+                    <div class="habit-number-badge">7</div>
+                    <h3 class="habit-title">Testereyi Bileleyin</h3>
+                    <p class="habit-subtitle">Dengeli Kendini Yenileme</p>
+                    <p class="habit-description">
+                        Sürekli olarak kendinizi dört boyutta yenileyin: fiziksel, sosyal/duygusal, 
+                        zihinsel ve ruhsal. Ağacı kesmek için testereyi durmadan kullanırsanız, 
+                        körelir. Testereyi bilemek için zaman ayırmak, uzun vadede daha verimli 
+                        olmanızı sağlar.
+                    </p>
+                    <div class="habit-principles">
+                        <h4 class="principles-title">4 Yenileme Boyutu:</h4>
+                        <ul class="principles-list">
+                            <li><strong>Fiziksel:</strong> Egzersiz, beslenme, stres yönetimi, uyku</li>
+                            <li><strong>Ruhsal:</strong> Değer netliği, bağlılık, çalışma ve meditasyon</li>
+                            <li><strong>Zihinsel:</strong> Okuma, yazma, öğrenme, öğretme</li>
+                            <li><strong>Sosyal/Duygusal:</strong> Hizmet, empati, sinerji, içsel güvenlik</li>
+                        </ul>
+                    </div>
+                    <div class="habit-example">
+                        💡 Örnek: Her gün 1 saat "testereyi bileme" zamanı ayırın: 
+                        15 dakika egzersiz, 15 dakika okuma, 15 dakika meditasyon, 
+                        15 dakika ilişkilerinizi güçlendirme.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="paradigm-shift">
+        <div class="paradigm-content">
+            <h2 class="paradigm-title">Paradigma Değişimi</h2>
+            <p style="font-size: 1.3rem; max-width: 800px; margin: 0 auto 3rem; opacity: 0.95; line-height: 1.8;">
+                Dünyayı nasıl gördüğümüz, kim olduğumuzu belirler. Paradigmalarımızı değiştirmek, 
+                hayatımızı değiştirir. Bu alışkanlıklar, hayata bakışınızı temelden dönüştürecek 
+                güçlü paradigma değişimleridir.
+            </p>
+            
+            <div class="paradigm-grid">
+                <div class="paradigm-card">
+                    <span class="paradigm-icon">🎯</span>
+                    <h3 class="paradigm-card-title">Karakter Etiği</h3>
+                    <p class="paradigm-card-desc">
+                        Kişilik etiği değil karakter etiği. Tekniklerden önce prensipler gelir. 
+                        İçten dışa doğru değişim.
+                    </p>
+                </div>
+
+                <div class="paradigm-card">
+                    <span class="paradigm-icon">🌱</span>
+                    <h3 class="paradigm-card-title">Süreç Odaklı</h3>
+                    <p class="paradigm-card-desc">
+                        Sonuçlara odaklanmak yerine sürece odaklanın. Hızlı çözümler değil, 
+                        kalıcı değişim.
+                    </p>
+                </div>
+
+                <div class="paradigm-card">
+                    <span class="paradigm-icon">🔄</span>
+                    <h3 class="paradigm-card-title">İçeriden Dışarıya</h3>
+                    <p class="paradigm-card-desc">
+                        Başkalarını değiştirmeye çalışmadan önce kendinizi değiştirin. 
+                        Kendi paradigmalarınızı inceleyin.
+                    </p>
+                </div>
+
+                <div class="paradigm-card">
+                    <span class="paradigm-icon">💎</span>
+                    <h3 class="paradigm-card-title">Prensip Merkezli</h3>
+                    <p class="paradigm-card-desc">
+                        Prensipler değişmez doğrulardır. Hayatınızı zamana dayanmış 
+                        prensipler üzerine inşa edin.
+                    </p>
+                </div>
+
+                <div class="paradigm-card">
+                    <span class="paradigm-icon">🤝</span>
+                    <h3 class="paradigm-card-title">Karşılıklı Bağımlılık</h3>
+                    <p class="paradigm-card-desc">
+                        Bağımsızlık yeterli değildir. En yüksek başarı karşılıklı bağımlılıkta, 
+                        yani etkili işbirliğindedir.
+                    </p>
+                </div>
+
+                <div class="paradigm-card">
+                    <span class="paradigm-icon">🔋</span>
+                    <h3 class="paradigm-card-title">Yenilenme</h3>
+                    <p class="paradigm-card-desc">
+                        Sürekli iyileşme bir yaşam tarzıdır. Dört boyutta dengeli yenileme, 
+                        sürdürülebilir başarının anahtarıdır.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="implementation">
+        <div class="implementation-content">
+            <h2 class="implementation-title">Uygulama Adımları</h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem; color: #555;">
+                Bu alışkanlıkları hayatınıza entegre etmek için somut adımlar
+            </p>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Kişisel Misyon Beyanınızı Yazın</h4>
+                        <p>
+                            Kim olmak istediğinizi, ne yapmak istediğinizi ve neden yaptığınızı 
+                            açıkça tanımlayın. Bu, tüm kararlarınızın temelini oluşturacak.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Haftalık Planlama Yapın</h4>
+                        <p>
+                            Her hafta, rollerinizi ve önemli hedeflerinizi gözden geçirin. 
+                            Quadrant II aktivitelerine öncelik verin.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Günlük Proaktif Dil Kullanın</h4>
+                        <p>
+                            Reaktif ifadelerinizi proaktif ifadelerle değiştirin. 
+                            Dil, düşünce ve davranış kalıplarınızı değiştirir.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Empatik Dinleme Pratiği</h4>
+                        <p>
+                            Her gün en az bir kişiyi gerçekten anlamaya çalışın. 
+                            Cevap vermek için değil, anlamak için dinleyin.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h4>Günlük Testere Bileme</h4>
+                        <p>
+                            Her gün dört boyutta da kendinizi yenileyin. En az 1 saat 
+                            fiziksel, zihinsel, ruhsal ve sosyal yenilemeye ayırın.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h4>Kazan-Kazan Fırsatları Arayın</h4>
+                        <p>
+                            Her ilişkinizde ve işbirliğinizde Kazan-Kazan çözümleri arayın. 
+                            Bolluk zihniyetiyle yaklaşın.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="quote-section">
+        <div class="quote-container">
+            <div class="quote-mark">"</div>
+            <p class="quote-text">
+                Tohum ekip hasat bekleyemezsiniz. Değişim ve büyüme için 
+                gerekli sürece saygı göstermelisiniz. Kısayollar yoktur.
+            </p>
+            <p class="quote-author">— STEPHEN R. COVEY</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>
+            Bu uygulama Stephen R. Covey'in "The 7 Habits of Highly Effective People" 
+            kitabından ilham alınarak oluşturulmuştur.<br>
+            Kitabı okumak için: <a href="https://www.franklincovey.com/the-7-habits/" target="_blank">FranklinCovey</a>
+        </p>
+        <p style="margin-top: 1.5rem; opacity: 0.7;">
+            © 2026 - Eğitim amaçlı hazırlanmıştır
+        </p>
+    </footer>
+
+    <script>
+        // Smooth scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -80px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, index * 100);
+                }
+            });
+        }, observerOptions);
+
+        // Animate elements
+        document.querySelectorAll('.habit-card, .paradigm-card, .step-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(40px)';
+            el.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+            observer.observe(el);
+        });
+
+        // Parallax effect
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero-content');
+            
+            if (hero && scrolled < window.innerHeight) {
+                hero.style.transform = `translateY(${scrolled * 0.4}px)`;
+                hero.style.opacity = 1 - (scrolled / window.innerHeight * 0.8);
+            }
+
+            // Geometric shapes parallax
+            const shapes = document.querySelector('.geometric-bg');
+            if (shapes && scrolled < window.innerHeight) {
+                shapes.style.transform = `translateY(${scrolled * 0.2}px)`;
+            }
+        });
+
+        // Add hover sound effect simulation (visual feedback)
+        document.querySelectorAll('.habit-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.01)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
